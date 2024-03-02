@@ -1,8 +1,10 @@
+import { useDispatch, useSelector } from "react-redux";
 import Banner from "../components/Banner";
 import Categories from "../components/Categories";
 import DownloadNow from "../components/Download";
 import Items from "../components/Items";
 import UseCode from "../components/UseCode";
+
 
 
 function Home() {

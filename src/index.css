@@ -1,6 +1,7 @@
 /* CSS reset */
 ol, ul, dl{
   margin: 0;
+  padding: 0;
 }
 html,body {
   margin:0;
@@ -311,3 +312,81 @@ html,body {
   transform: scale(1.1);
 }
 
+/* download */
+
+.download img{
+  width: 100%;
+}
+
+/* footer */
+footer{
+padding: 50px 0;
+}
+
+footer h3{
+  font-size: 13px;
+  font-weight: 700;
+  color: #282c3f;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+footer ul li{
+  list-style: none;
+  line-height: 2;
+}
+
+footer ul li a{
+  display: block;
+  text-decoration: none;
+  color: #696b79;
+  font-size: 15px;
+}
+
+footer .brands{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .brands img{
+  width: 150px;
+}
+
+footer .keep-in-touch{
+  margin-top: 20px;
+}
+
+footer .keep-in-touch .social-medias{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+footer .keep-in-touch .social-medias > a{
+  text-decoration: none;
+  color: #696b79;
+  margin-right: 20px; 
+}
+footer .keep-in-touch .social-medias > a > svg{
+  transform: scale(1.5);
+}
+
+footer .whyus-single{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+footer .whyus-single span{
+  display: inline-block;
+  margin-right: 10px;
+}
+footer .whyus-single span > img{
+  width: 50px;
+}
+footer .whyus-single p {
+  color: #696b79;
+  font-size: 15px;
+}
+footer .whyus-single p strong{
+color: #282c3f;
+}
