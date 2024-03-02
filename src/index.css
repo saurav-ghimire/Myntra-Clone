@@ -143,3 +143,13 @@ html,body {
 .profile-section .profile-single-block span{
   display: inline-block;
 }
+
+/* coupon-section */
+.coupon-section img{
+  width: 100%;
+}
+
+/* Banner */
+.banner img{
+  width: 100%;
+}
