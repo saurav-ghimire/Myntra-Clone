@@ -274,3 +274,40 @@ html,body {
     border-radius: 10px;
     color: #fff;
 }
+
+/* categories-wrapper */
+.categories-wrapper{
+  padding: 40px 0;
+}
+
+.all-category{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.all-category .single-category{
+  width: 12.5%;
+  display: block;
+  text-align: center;
+}
+
+.all-category .single-category a{
+  text-decoration: none;
+  color: #282c3f;
+  display: block;
+}
+
+.all-category .single-category a h5{
+  margin-top: 10px;
+}
+
+.all-category .single-category a img{
+  transition: all linear .2s;
+}
+
+.all-category .single-category a:hover img{
+  transform: scale(1.1);
+}
+
