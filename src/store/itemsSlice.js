@@ -5,7 +5,7 @@ name: 'items',
 initialState: [],
 reducers : {
   addInitialItems : (store, action) => {
-    return console.log('i am herre');
+    return store = action.payload;
   }
 }
 })

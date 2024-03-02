@@ -199,6 +199,11 @@ html,body {
 .item-container .item-image-wrapper{
   overflow: hidden;
   position: relative;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
 }
 
 .item-container .item-image{

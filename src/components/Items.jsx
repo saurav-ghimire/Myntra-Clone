@@ -1,44 +1,54 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { itemsActions } from "../store/itemsSlice";
 
 function Items() {
-  const StoreItems = useSelector(store => store.items);
+  const storeItems = useSelector(store => store.items);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     fetch('https://dummyjson.com/products')
     .then(res => res.json())
     .then((data) => {
-      console.log(data.posts)
+      dispatch(itemsActions.addInitialItems(data.products))
     })
   }, [])
 
-  return <>
-  <div className="all-items">
-    <div className="container">
-      <div className="title-section">
-        <h2>Crazy</h2>
-        <h4>Deals</h4>
-      </div>
-      <div className="items-container">
-      <div className="item-container">
-          <div className="item-image-wrapper">
-            <img className="item-image" src="images/1.jpg" alt="item image" />
-            <div className="rating">4.5 ⭐ | 1400</div>
-          </div>
-          
-          <div className="company-name">Carlton London</div>
-          <div className="item-name">Rhodium-Plated CZ Floral Studs</div>
-          <div className="price"><span className="current-price">Rs 606</span><span className="original-price">Rs 1045</span><span className="discount">(42% OFF)</span></div>
-          <button className="btn-add-bag">
-            
-            Add to Bag
-          </button>
+  return (
+    <div className="all-items">
+      <div className="container">
+        <div className="title-section">
+          <h2>Crazy</h2>
+          <h4>Deals</h4>
+        </div>
+        <div className="items-container">
+          {storeItems.map((index) => (
+            <div className="item-container" key={index.id}>
+              <div className="item-image-wrapper">
+                <img className="item-image" src={index.thumbnail} alt="item image" />
+                <div className="rating">{index.rating} ⭐ | {index.stock} in stock</div>
+              </div>
+              
+              <div className="company-name">{index.brand}</div>
+              <div className="item-name">{index.title}</div>
+              <div className="price">
+                <span className="current-price">
+                  $ {(index.price - (index.price * (index.discountPercentage / 100))).toFixed(2)}
+                </span>
+                <span className="original-price">
+                  $ {index.price.toFixed(2)}
+                </span>
+                <span className="discount">({index.discountPercentage}% OFF)</span>
+              </div>
+              <button className="btn-add-bag">
+                Add to Bag
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
-  </div>
-</div>
-
-  </>;
+  );
 }
 
 export default Items;
