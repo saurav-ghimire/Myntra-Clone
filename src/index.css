@@ -7,6 +7,28 @@ html,body {
   padding:0;
 }
 
+/* title-section */
+.title-section{
+  display: block;
+  text-align: center;
+}
+
+.title-section h2{
+  font-size: 45px;
+  font-weight: 900;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  color: #fc8602;
+}
+.title-section h4{
+  font-size: 20px;
+  font-weight: 900;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  color: #736ee1;
+  margin-bottom: 30px;
+}
+
 /* Header */
 .header{
   display: flex;
@@ -152,4 +174,103 @@ html,body {
 /* Banner */
 .banner img{
   width: 100%;
+}
+
+/* all-items */
+.all-items{
+  background-color: #fafafa;
+  padding: 40px 0;
+}
+/* items-container */
+.items-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  
+}
+
+.items-container .item-container{
+  width: 23%;
+  margin-bottom: 15px;
+}
+
+.item-container .item-image-wrapper{
+  overflow: hidden;
+  position: relative;
+}
+
+.item-container .item-image{
+  width: 100%;
+  transition: all linear .3s;;
+}
+.item-container .item-image-wrapper:hover .item-image{
+  transform: scale(1.1);
+}
+.item-container .rating {
+  font-size: 12px;
+  font-weight: 700;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 9;
+  background-color: #fff;
+  padding: 5px 10px;
+}
+
+.item-container .company-name {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    color: #282c3f;
+    margin-bottom: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.item-container .item-name {
+  color: #535766;
+  font-size: 14px;
+  line-height: 1;
+  margin-bottom: 0;
+  margin-top: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 400;
+  display: block;
+}
+
+.item-container .current-price {
+  font-size: 14px;
+  font-weight: 700;
+  color: #282c3f;
+}
+
+.item-container .original-price {
+  text-decoration: line-through;
+  color: #7e818c;
+  font-weight: 400;
+  margin-left: 5px;
+  font-size: 12px;
+}
+
+.item-container .discount {
+  color: #ff905a;
+  font-weight: 400;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.item-container .btn-add-bag {
+    margin-top: 8px;
+    font-size: 18px;
+    width: 100%;
+    background-color: #736ee1;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: #fff;
 }
