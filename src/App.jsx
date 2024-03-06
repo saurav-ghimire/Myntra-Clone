@@ -5,6 +5,8 @@ import Header from './components/Header'
 import Home from './pages/Home'
 import { itemsActions } from './store/itemsSlice';
 import { useEffect } from 'react';
+import { Outlet } from 'react-router-dom';
+
 
 
 function App() {
@@ -22,7 +24,7 @@ function App() {
   return (
     <>
      <Header />
-     <Home />
+     <Outlet></Outlet>
      <Footer />
     </>
   )

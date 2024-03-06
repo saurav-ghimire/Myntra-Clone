@@ -163,7 +163,11 @@ html,body {
   margin-left: 15px;
   position: relative;
 }
-
+.profile-section .profile-single-block a{
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+}
 .profile-section .profile-single-block span{
   display: inline-block;
 }
@@ -297,6 +301,11 @@ html,body {
     padding: 5px 15px;
     border-radius: 10px;
     color: #fff;
+}
+
+.item-container .btn-add-bag.btn-remove-bag {
+  
+  background-color: #d9534f;
 }
 
 /* categories-wrapper */
