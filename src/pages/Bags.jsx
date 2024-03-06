@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import BagItems from "../components/BagsItems";
 
 
 function Bags() {
@@ -11,7 +12,7 @@ function Bags() {
   );
 
   return <>
-  <main>
+  <div className="container">
       <div className="bag-page">
         <div className="bag-items-container">
         {finalItems.map(item => <BagItems item={item} />)}
@@ -21,7 +22,7 @@ function Bags() {
           {/* <BagsSummary /> */}
         </div>
       </div>
-    </main>
+    </div>
   </>
 }
 
