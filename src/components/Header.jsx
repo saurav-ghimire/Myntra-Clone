@@ -21,11 +21,11 @@ function Header() {
             </div>
             <div className="custom-menu">
               <ul>
+              <li> <Link to="">HOME </Link></li>
               <li> <Link to="">MEN </Link></li>
               <li> <Link to="">WOMEN </Link></li>
               <li> <Link to="">KIDS </Link></li>
               <li> <Link to="">HOME & LIVING </Link></li>
-              <li> <Link to="">BEAUTY </Link></li>
               <li> <Link to="">STUDIO <small>NEW</small></Link></li>
               </ul>
             </div>
@@ -39,9 +39,12 @@ function Header() {
             </div>
             <div className="profiles">
               <div className="profile-single-block">
+              <Link to="/login">
                 <CiUser />
                 <span>Profile</span>
+              </Link>
               </div>
+              
               <div className="profile-single-block">
                 <CiHeart />
                 <span>Wishlist</span>

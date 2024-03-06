@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import BagItems from "../components/BagsItems";
+import BagsSummary from "../components/BagsSummary";
 
 
 function Bags() {
@@ -15,12 +16,15 @@ function Bags() {
   <div className="container">
       <div className="bag-page">
         <div className="bag-items-container">
-        {finalItems.map(item => <BagItems item={item} />)}
-          
+        {finalItems.length === 0 ? <h2>No items on Cart</h2> :
+        finalItems.map(item => <BagItems key={item.id} item={item} />)
+        }        
         </div>
+        {finalItems.length === 0 ? "" :
         <div className="bag-summary">
-          {/* <BagsSummary /> */}
+          <BagsSummary />
         </div>
+        }
       </div>
     </div>
   </>

@@ -4,12 +4,12 @@ import { bagActions } from "../store/bagSlice";
 import { CiStar } from "react-icons/ci";
 
 function BagItems({ item }) {
-  console.log(item);
+  // console.log(item);
 
   const dispatch = useDispatch();
 
   const handleRemoveItem = () => {
-    // dispatch(bagsActions.removeFromBag(item.id));
+    dispatch(bagActions.removeFromBag(item.id));
   };
 
   // Calculate discounted price if discount is available
@@ -45,7 +45,7 @@ function BagItems({ item }) {
       <div className="remove-from-cart" onClick={handleRemoveItem}><TiDelete /></div>
     </div>
     </div>
-    
+
   );
 }
 

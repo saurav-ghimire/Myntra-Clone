@@ -14,6 +14,8 @@ import {
 
 import Home from './pages/Home.jsx';
 import Bags from './pages/Bags.jsx';
+import Login from './pages/Login.jsx';
+
 
 const router = createBrowserRouter([
   { path: "/", element: <App />, children: [
@@ -24,6 +26,10 @@ const router = createBrowserRouter([
     {
       path: "/bags",
       element: <Bags />,
+    },
+    {
+      path: "/login",
+      element: <Login />,
     }
   ]
   }

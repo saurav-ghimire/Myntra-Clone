@@ -11,6 +11,10 @@ function SingleItems({index}) {
     dispatch(bagActions.addToCart(id));
   }
 
+  const handleRemoveCart = (id) => {
+    dispatch(bagActions.removeFromBag(id));
+  }
+
   return <>      
     <div className="item-container" key={index.id}>
       <div className="item-image-wrapper">
@@ -33,7 +37,7 @@ function SingleItems({index}) {
         !isOnBag ? <button className="btn-add-bag" onClick={() => addToCartHandle(index.id)}>
         Add to Bag
       </button> :
-      <button className="btn-add-bag btn-remove-bag" onClick={() => addToCartHandle(index.id)}>
+      <button className="btn-add-bag btn-remove-bag" onClick={() => handleRemoveCart(index.id)}>
       Remove From Bag
     </button>
       }
