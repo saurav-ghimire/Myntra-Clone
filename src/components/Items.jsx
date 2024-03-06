@@ -1,18 +1,14 @@
-import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { itemsActions } from "../store/itemsSlice";
+import { bagActions } from "../store/bagSlice";
+
 
 function Items() {
   const storeItems = useSelector(store => store.items);
-  const dispatch = useDispatch();
 
-  useEffect(() => {
-    fetch('https://dummyjson.com/products')
-    .then(res => res.json())
-    .then((data) => {
-      dispatch(itemsActions.addInitialItems(data.products))
-    })
-  }, [])
+  const dispatch = useDispatch()
+  const addToCartHandle = (id) => {
+    dispatch(bagActions.addToCart(id));
+  }
 
   return (
     <div className="all-items">
@@ -40,7 +36,7 @@ function Items() {
                 </span>
                 <span className="discount">({index.discountPercentage}% OFF)</span>
               </div>
-              <button className="btn-add-bag">
+              <button className="btn-add-bag" onClick={() => addToCartHandle(index.id)}>
                 Add to Bag
               </button>
             </div>

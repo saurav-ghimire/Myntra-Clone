@@ -161,12 +161,30 @@ html,body {
   display: block;
   text-align: center;
   margin-left: 15px;
+  position: relative;
 }
 
 .profile-section .profile-single-block span{
   display: inline-block;
 }
 
+.profile-section .profile-single-block span.bagCount{
+  background-color: #fc8602;
+  position: absolute;
+  top: -13px;
+  right: -13px;
+  z-index: 1;
+  line-height: initial;
+  font-size: 13px;
+  font-weight: 900;
+  font-family: 'Roboto', sans-serif;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* coupon-section */
 .coupon-section img{
   width: 100%;

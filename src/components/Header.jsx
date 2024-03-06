@@ -1,7 +1,13 @@
 import { CiSearch, CiUser, CiHeart } from "react-icons/ci";
 import { LiaShoppingBagSolid } from "react-icons/lia";
 
+import { useSelector } from "react-redux";
+
 function Header() {
+  
+  const cartItems = useSelector((store) => store.bags)
+
+
   return <>
   <header>
     <div className="container-fluid">
@@ -41,7 +47,8 @@ function Header() {
               </div>
               <div className="profile-single-block">
                 <LiaShoppingBagSolid />
-                <span>Profile</span>
+                <span className="bagCount">{cartItems.length}</span>
+                <span>Bag</span>
               </div>
             </div>
           </div>
