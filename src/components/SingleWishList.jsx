@@ -1,11 +1,24 @@
 import { TiDelete } from "react-icons/ti";
 import { CiStar } from "react-icons/ci";
+import { useDispatch, useSelector } from "react-redux";
+import { wishListActions } from "../store/wishList";
+
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function SingleWishList({item}) {
   
+  const removeMessage = () => toast.success('Wishlist Removed!');
 
+  const dispatch = useDispatch();
   const discountedPrice = item.price - (item.price * (item.discountPercentage / 100));
   
+  const handleOnRemove  = (id) => {
+    dispatch(wishListActions.removeWishList(id));
+    removeMessage();
+
+  }
+
   return <>
   <div className="item-container">
     <div className="bag-item-container">
@@ -33,7 +46,7 @@ function SingleWishList({item}) {
         </div>
       </div>
 
-      <div className="remove-from-cart" ><TiDelete /></div>
+      <div className="remove-from-cart" onClick={() => handleOnRemove(item.id)} ><TiDelete /></div>
     </div>
     </div>
   </>;
