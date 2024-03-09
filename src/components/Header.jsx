@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function Header() {
   
   const cartItems = useSelector((store) => store.bags)
-
+  const wishListItems = useSelector(store => store.wishlist)
 
   return <>
   <header>
@@ -46,8 +46,11 @@ function Header() {
               </div>
               
               <div className="profile-single-block">
-                <CiHeart />
-                <span>Wishlist</span>
+                <Link to="/wishlist">
+                  <CiHeart />
+                  <span>Wishlist</span>
+                  <span className="bagCount">{wishListItems.length}</span>
+                </Link>
               </div>
               <div className="profile-single-block">
                 <Link to="/bags"><LiaShoppingBagSolid />

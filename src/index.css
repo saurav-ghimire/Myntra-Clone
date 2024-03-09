@@ -216,6 +216,7 @@ html,body {
 .items-container .item-container{
   width: 23%;
   margin-bottom: 15px;
+  position: relative;
 }
 
 .item-container .item-image-wrapper{
@@ -257,7 +258,15 @@ html,body {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-
+.item-container .wishList button{
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 99;
+}
 .item-container .item-name {
   color: #535766;
   font-size: 14px;

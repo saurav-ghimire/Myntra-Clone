@@ -1,10 +1,16 @@
 import { useDispatch, useSelector } from "react-redux";
 import { bagActions } from "../store/bagSlice";
+import { wishListActions } from "../store/wishList";
+import { CiHeart } from "react-icons/ci";
+import { FaHeart } from "react-icons/fa";
 
 function SingleItems({index}) {
   
   const dispatch = useDispatch()
   const bagItems = useSelector(store => store.bags)
+  const wishListItems = useSelector(store => store.wishlist)
+  const isOnWishList = wishListItems.indexOf(index.id) >= 0;
+  
   const isOnBag = bagItems.indexOf(index.id) >= 0;
   
   const addToCartHandle = (id) => {
@@ -13,6 +19,10 @@ function SingleItems({index}) {
 
   const handleRemoveCart = (id) => {
     dispatch(bagActions.removeFromBag(id));
+  }
+
+  const handleWishList = (id) => {
+    dispatch(wishListActions.addWishList(id))
   }
 
   return <>      
@@ -32,6 +42,12 @@ function SingleItems({index}) {
           $ {index.price.toFixed(2)}
         </span>
         <span className="discount">({index.discountPercentage}% OFF)</span>
+      </div>
+      <div className="wishList">
+      {
+        !isOnWishList ?  <button onClick={() => handleWishList(index.id)}><CiHeart /></button> :
+        <button onClick={() => handleWishList(index.id)}><FaHeart /></button>
+      }
       </div>
       {
         !isOnBag ? <button className="btn-add-bag" onClick={() => addToCartHandle(index.id)}>
