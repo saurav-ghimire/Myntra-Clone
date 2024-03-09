@@ -3,6 +3,7 @@ import { CiStar } from "react-icons/ci";
 
 function SingleWishList({item}) {
   
+
   const discountedPrice = item.price - (item.price * (item.discountPercentage / 100));
   
   return <>

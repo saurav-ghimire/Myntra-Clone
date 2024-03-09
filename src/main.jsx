@@ -16,6 +16,8 @@ import Home from './pages/Home.jsx';
 import Bags from './pages/Bags.jsx';
 import Login from './pages/Login.jsx';
 import WishList from './pages/WishList.jsx';
+import { ToastContainer } from 'react-toastify';
+
 
 
 const router = createBrowserRouter([
@@ -45,6 +47,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={myntraStore}>
     <RouterProvider router={router} />
+    <ToastContainer />
     </Provider>
   </React.StrictMode>,
 )
