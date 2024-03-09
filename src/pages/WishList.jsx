@@ -14,12 +14,15 @@ function WishList() {
 
   
   return <>
-  <div className="container">
-    <h1>Your Product Wishes</h1>
-    {
-      finalItems.map(item => <SingleWishList key={item.id} item={item} />)
-    }
-    
+    <div className="container">
+      <div className="bag-page">
+        <div className="wish-items-container">
+        {finalItems.length === 0 ? <h2>No items on WishList</h2> : 
+        
+          finalItems.map(item => <SingleWishList key={item.id} item={item} />)
+        }
+      </div>
+    </div>
   </div>
   </>;
 }
