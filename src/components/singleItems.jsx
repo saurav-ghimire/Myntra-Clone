@@ -25,6 +25,11 @@ function SingleItems({index}) {
     dispatch(wishListActions.addWishList(id))
   }
 
+  const removeWishList = (id) => {
+    dispatch(wishListActions.removeWishList(id))
+    console.log(id);
+  }
+
   return <>      
     <div className="item-container" key={index.id}>
       <div className="item-image-wrapper">
@@ -43,11 +48,14 @@ function SingleItems({index}) {
         </span>
         <span className="discount">({index.discountPercentage}% OFF)</span>
       </div>
+      
+      {/* WishList Here */}
       <div className="wishList">
       {
         !isOnWishList ?  <button onClick={() => handleWishList(index.id)}><CiHeart /></button> :
-        <button onClick={() => handleWishList(index.id)}><FaHeart /></button>
+        <button onClick={() => removeWishList(index.id)}><FaHeart /></button>
       }
+
       </div>
       {
         !isOnBag ? <button className="btn-add-bag" onClick={() => addToCartHandle(index.id)}>
