@@ -7,6 +7,8 @@ import { FaHeart } from "react-icons/fa";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import { Link } from "react-router-dom";
+
 function SingleItems({ index }) {
   const dispatch = useDispatch();
   const bagItems = useSelector(store => store.bags);
@@ -48,9 +50,10 @@ function SingleItems({ index }) {
           <img className="item-image" src={index.thumbnail} alt="item image" />
           <div className="rating">{index.rating} ⭐ | {index.stock} in stock</div>
         </div>
-
-        <div className="company-name">{index.brand}</div>
-        <div className="item-name">{index.title}</div>
+        <Link to={`/products/${index.title}`}>
+          <div className="company-name">{index.brand}</div>
+          <div className="item-name">{index.title}</div>
+        </Link>
         <div className="price">
           <span className="current-price">
             $ {(index.price - (index.price * (index.discountPercentage / 100))).toFixed(2)}

@@ -16,31 +16,45 @@ import Home from './pages/Home.jsx';
 import Bags from './pages/Bags.jsx';
 import Login from './pages/Login.jsx';
 import WishList from './pages/WishList.jsx';
+import SingleProductPage from './components/SingleProductPage.jsx';
 import { ToastContainer } from 'react-toastify';
 
 
 
 const router = createBrowserRouter([
-  { path: "/", element: <App />, children: [
-    {
-      path: "/",
-      element: <Home />,
-    },
-    {
-      path: "/bags",
-      element: <Bags />,
-    },
-    {
-      path: "/login",
-      element: <Login />,
-    },
-    {
-      path: "/wishlist",
-      element: <WishList />,
-    },
-  ]
-  }
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/bags",
+        element: <Bags />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/wishlist",
+        element: <WishList />,
+      },
+      {
+        path: "/products", // Parent route for individual products
+        children: [
+          {
+            path: ":id", // Dynamic route for individual products using their IDs
+            element: <SingleProductPage />,
+          },
+        ],
+      },
+    ],
+  },
 ]);
+
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
