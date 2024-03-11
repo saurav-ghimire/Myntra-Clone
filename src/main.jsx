@@ -51,6 +51,10 @@ const router = createBrowserRouter([
           },
         ],
       },
+      {
+        path: "/checkout",
+        element: <WishList />,
+      },
     ],
   },
 ]);

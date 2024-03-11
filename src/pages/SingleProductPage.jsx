@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { bagActions } from "../store/bagSlice";
+import { toast } from "react-toastify";
 
 function ItemDetails() {
   const { id } = useParams();
@@ -22,8 +23,15 @@ function ItemDetails() {
 
   const dispatch = useDispatch();
   
+  const addedOnCartMessage = () => toast.success('Product Added!');  
+  const removeFromCartMessage = () => toast.success('Product Removed!');  
+
   const onHandleSUbmit = (id) => {
     dispatch(bagActions.addToCart(id));
+    
+    addedOnCartMessage();
+    
+
   };
 
   
@@ -32,6 +40,7 @@ function ItemDetails() {
 
   const handleRemoveCart = (id) => {
     dispatch(bagActions.removeFromBag(id));
+    removeFromCartMessage();
   };
   
 
