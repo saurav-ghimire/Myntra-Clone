@@ -97,8 +97,6 @@ function ItemDetails() {
                     Remove From Bag
                   </button>
               }
-              
-                
 
               </div>
               </div>

@@ -17,8 +17,10 @@ import Bags from './pages/Bags.jsx';
 import Login from './pages/Login.jsx';
 import WishList from './pages/WishList.jsx';
 import SingleProductPage from './pages/SingleProductPage.jsx';
-import { ToastContainer } from 'react-toastify';
+import CheckOut from './pages/CheckOut.jsx';
 
+import { ToastContainer } from 'react-toastify';
+import orderConfirmed from './pages/orderConfirmed.jsx';
 
 
 const router = createBrowserRouter([
@@ -53,8 +55,13 @@ const router = createBrowserRouter([
       },
       {
         path: "/checkout",
-        element: <WishList />,
+        element: <CheckOut />,
       },
+      {
+        path: "/orderConfirmed",
+        element: <orderConfirmed />,
+      },
+      
     ],
   },
 ]);

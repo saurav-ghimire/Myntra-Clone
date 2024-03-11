@@ -790,3 +790,63 @@ color: #282c3f;
   border-radius: 10px;
   color: #fff;
 }
+
+
+/* Checkout Pagee */
+
+.checkout-form-container {
+  width: 50%;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  
+}
+
+.checkout-form-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.checkout-form-container .form-group {
+  margin-bottom: 15px;
+}
+
+.checkout-form-container .form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+.checkout-form-container .form-group input,
+.checkout-form-container .form-group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.checkout-form-container .form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.checkout-form-container .form-group.col-6 {
+  flex: 1;
+}
+
+.checkout-form-container button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
