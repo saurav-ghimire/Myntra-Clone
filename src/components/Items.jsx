@@ -6,8 +6,6 @@ function Items() {
   const storeItems = useSelector(store => store.items);
 
 
-  console.log(storeItems);
-
 
   return (
     <div className="all-items">

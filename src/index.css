@@ -677,3 +677,116 @@ color: #282c3f;
   color:#fff;
 }
 
+/* breadcrumb */
+
+.breadcrumb{
+  background-color: #eee;
+  padding: 20px;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 40px;
+}
+
+.breadcrumb a{
+  text-decoration: none;
+  display: inline-block;
+  color: #282c3f;
+}
+
+/* single-item-details */
+.single-item-details{
+  padding: 0 0 40px 0;
+  background-color: #fff;
+}
+
+
+.single-item-details .item-images > img{
+  margin-bottom: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.single-item-content {
+  
+  padding:0  20px;
+}
+
+.single-item-content .product-title {
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #282c3f;
+}
+
+.single-item-content .description {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.single-item-content .ratings {
+  
+  margin-bottom: 5px;
+  display: inline-block;
+  padding: 3px 8px;
+  background-color: #fc8602;
+  color: #fff;
+}
+
+.single-item-content .stockItems {
+  margin-bottom: 5px;
+  display: inline-block;
+  padding: 3px 8px;
+  background-color: #fc8602;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.single-item-content .brands {
+  font-style: italic;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+
+.single-item-content .categories {
+  text-transform: uppercase;
+  color: #282c3f;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-family: 'Roboto';
+}
+
+.single-item-content .price {
+  font-size: 22px;
+  color: #333;
+  margin-top: 15px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+  padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid #333;
+}
+.single-item-content .beforeDiscount{
+  text-decoration: line-through;
+  font-size: 17px;
+  font-weight: 400;
+  opacity: .5;
+}
+.single-item-content .discounted-price {
+  font-size: 18px;
+  color: #e74c3c;
+  margin-top: 10px;
+}
+
+.single-add-to-cart .btn-add-bag {
+  margin-top: 8px;
+  font-size: 18px;
+  width: max-content;
+  background-color: #736ee1;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 10px;
+  color: #fff;
+}

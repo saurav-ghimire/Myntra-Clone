@@ -16,7 +16,7 @@ import Home from './pages/Home.jsx';
 import Bags from './pages/Bags.jsx';
 import Login from './pages/Login.jsx';
 import WishList from './pages/WishList.jsx';
-import SingleProductPage from './components/SingleProductPage.jsx';
+import SingleProductPage from './pages/SingleProductPage.jsx';
 import { ToastContainer } from 'react-toastify';
 
 
