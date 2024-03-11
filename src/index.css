@@ -512,6 +512,11 @@ color: #282c3f;
   cursor: pointer;
 }
 
+.btn-place-order a{
+  text-decoration: none;
+  color: #fff;
+}
+
 .bag-item-container {
   margin-bottom: 8px;
   background: #fff;
@@ -849,4 +854,56 @@ color: #282c3f;
 
 button:hover {
   background-color: #0056b3;
+}
+
+
+.order-confirmed-container {
+  
+  max-width: 60%;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.section-heading {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.customer-info,
+.order-items,
+.total-amount {
+  margin-bottom: 20px;
+}
+
+.info-label {
+  font-weight: bold;
+}
+
+.items-list {
+  list-style: none;
+  padding: 0;
+}
+
+.item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.item-title {
+  font-weight: bold;
+}
+
+.confirmation-message {
+  text-align: center;
+  font-size: 18px;
+  color: green;
+  margin-top: 20px;
 }

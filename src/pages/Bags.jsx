@@ -18,13 +18,13 @@ function Bags() {
         <div className="bag-items-container">
         {finalItems.length === 0 ? <h2>No items on Cart</h2> :
         finalItems.map(item => <BagItems key={item.id} item={item} />)
-        }        
+        }
         </div>
         {finalItems.length === 0 ? "" :
         <div className="bag-summary">
           <BagsSummary />
         </div>
-        }
+        }        
       </div>
     </div>
   </>

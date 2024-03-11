@@ -20,7 +20,7 @@ import SingleProductPage from './pages/SingleProductPage.jsx';
 import CheckOut from './pages/CheckOut.jsx';
 
 import { ToastContainer } from 'react-toastify';
-import orderConfirmed from './pages/orderConfirmed.jsx';
+import OrderConfirmed from './pages/orderConfirmed.jsx';
 
 
 const router = createBrowserRouter([
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/orderConfirmed",
-        element: <orderConfirmed />,
+        element: <OrderConfirmed />,
       },
       
     ],

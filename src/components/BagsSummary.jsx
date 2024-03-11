@@ -12,7 +12,7 @@ function BagsSummary({}) {
     const itemIndex = bagItemIds.indexOf(item.id);
     return itemIndex >= 0;
   });
-  console.log(finalItems)
+  
   const CONVENIENCE_FEES = 99;
   let totalItem = bagItemIds.length;
   let totalMRP = 0;
@@ -20,10 +20,17 @@ function BagsSummary({}) {
 
   finalItems.forEach((bagItem) => {
     totalMRP += bagItem.price;
-    totalDiscount += bagItem.price - bagItem.current_price;
+  
+    // Calculate the discount amount based on the discount percentage
+    const discountAmount = (bagItem.price * bagItem.discountPercentage) / 100;
+  
+    // Subtract the discount amount from the price
+    totalDiscount += Math.round(bagItem.price - discountAmount);
   });
+  
 
-  let finalPayment = totalMRP - totalDiscount + CONVENIENCE_FEES;
+  let finalPayment = Math.round(totalMRP - totalDiscount + CONVENIENCE_FEES);
+
 
   return <>
       <div className="bag-details-container">
