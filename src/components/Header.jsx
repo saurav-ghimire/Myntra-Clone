@@ -22,11 +22,11 @@ function Header() {
             <div className="custom-menu">
               <ul>
               <li> <Link to="">HOME </Link></li>
-              <li> <Link to="">MEN </Link></li>
-              <li> <Link to="">WOMEN </Link></li>
-              <li> <Link to="">KIDS </Link></li>
-              <li> <Link to="">HOME & LIVING </Link></li>
-              <li> <Link to="">STUDIO <small>NEW</small></Link></li>
+              <li> <Link to="/men">MEN </Link></li>
+              <li> <Link to="/women">WOMEN </Link></li>
+              <li> <Link to="/kids">KIDS </Link></li>
+              <li> <Link to="/home-and-living">HOME & LIVING </Link></li>
+              <li> <Link to="/shop">Shop <small>NEW</small></Link></li>
               </ul>
             </div>
           </div>

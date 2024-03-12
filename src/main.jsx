@@ -21,6 +21,7 @@ import CheckOut from './pages/CheckOut.jsx';
 
 import { ToastContainer } from 'react-toastify';
 import OrderConfirmed from './pages/orderConfirmed.jsx';
+import CommingSoon from './pages/CommingSoon.jsx';
 
 
 const router = createBrowserRouter([
@@ -60,6 +61,26 @@ const router = createBrowserRouter([
       {
         path: "/orderConfirmed",
         element: <OrderConfirmed />,
+      },
+      {
+        path: "/men",
+        element: <CommingSoon />,
+      },
+      {
+        path: "/women",
+        element: <CommingSoon />,
+      },
+      {
+        path: "/kids",
+        element: <CommingSoon />,
+      },
+      {
+        path: "/home-and-living",
+        element: <CommingSoon />,
+      },
+      {
+        path: "/shop",
+        element: <CommingSoon />,
       },
       
     ],
