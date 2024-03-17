@@ -1064,10 +1064,6 @@ button:hover {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-.custom-menu {
-  display: none;
-}
-
 .custom-menu.show {
   display: block;
 }
@@ -1100,6 +1096,10 @@ button:hover {
 
 /* Phone Styles */
 @media screen and (max-width: 576px) {
+  .custom-menu {
+    display: none;
+  }
+  
   .menu-section{
     display: block;
   }
