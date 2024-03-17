@@ -57,7 +57,7 @@ function ItemDetails() {
         </div>
       <div className="container">
         <div className="row">
-          <div className="col-6">
+          <div className="col-12 col-md-6">
           <div className="item-images">
           <img src={item.thumbnail} alt={item.title} />
             {item.images.map((image, index) => (
@@ -65,7 +65,7 @@ function ItemDetails() {
             ))}
           </div>
           </div>
-          <div className="col-6">
+          <div className="col-12 col-md-6">
               <div className="single-item-content">
               <h2 className="product-title">{item.title}</h2>
               <p className="description">{item.description}</p>

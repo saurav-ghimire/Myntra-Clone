@@ -8,6 +8,7 @@ import Search from "./Search";
 function Header() {
   const [searchQuery, setSearchQuery] = useState("");
   const [showSearchResults, setShowSearchResults] = useState(false);
+  const [showMenu, setShowMenu] = useState(false); // State for mobile menu
 
   const cartItems = useSelector((store) => store.bags);
   const wishListItems = useSelector((store) => store.wishlist);
@@ -15,14 +16,16 @@ function Header() {
   const handleSearchChange = (event) => {
     const query = event.target.value;
     setSearchQuery(query);
-
-    // Show search results only if query is not empty
     setShowSearchResults(query !== "");
   };
 
   const clearSearchQuery = () => {
     setSearchQuery("");
     setShowSearchResults(false);
+  };
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
   };
 
   return (
@@ -35,14 +38,25 @@ function Header() {
                 <div className="logo">
                   <img src="./images/myntra_logo.webp" alt="" />
                 </div>
-                <div className="custom-menu">
+                {/* Toggle button for mobile menu */}
+                <button
+                  className="menu-toggle d-lg-none" // Hide on LG screens and above
+                  onClick={toggleMenu}
+                  aria-label="Toggle Menu"
+                >
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+                <div className={`custom-menu ${showMenu ? "show" : ""}`}>
+                  {/* Navigation items */}
                   <ul>
-                    <li> <Link to="">HOME </Link></li>
-                    <li> <Link to="/category/smartphones">smartphones </Link></li>
-                    <li> <Link to="/category/laptops">laptops </Link></li>
-                    <li> <Link to="/category/fragrances">fragrances </Link></li>
-                    <li> <Link to="/category/skincare">Skin Care </Link></li>
-                    <li> <Link to="/shop">Shop <small>NEW</small></Link></li>
+                    <li><Link to="">HOME</Link></li>
+                    <li><Link to="/category/smartphones">Smartphones</Link></li>
+                    <li><Link to="/category/laptops">Laptops</Link></li>
+                    <li><Link to="/category/fragrances">Fragrances</Link></li>
+                    <li><Link to="/category/skincare">Skin Care</Link></li>
+                    <li><Link to="/shop">Shop <small>NEW</small></Link></li>
                   </ul>
                 </div>
               </div>
