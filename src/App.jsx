@@ -2,10 +2,11 @@
 import { useDispatch } from 'react-redux';
 import Footer from './components/Footer'
 import Header from './components/Header'
-import Home from './pages/Home'
+
 import { itemsActions } from './store/itemsSlice';
 import { useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
+import FloatingCart from './components/FloatingCart';
 
 
 
@@ -24,6 +25,7 @@ function App() {
   return (
     <>
      <Header />
+     <FloatingCart />
      <Outlet></Outlet>
      <Footer />
     </>

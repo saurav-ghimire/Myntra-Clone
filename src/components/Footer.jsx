@@ -1,6 +1,18 @@
-import { CiFacebook, CiInstagram, CiTwitter, CiYoutube } from "react-icons/ci";
+
+import { CiFacebook, CiInstagram, CiTwitter, CiYoutube, CiShoppingCart } from "react-icons/ci";
+import { FloatingCartActions } from "../store/FloatingCart";
+import { useDispatch } from "react-redux";
+
 
 function Footer() {
+  const dispatch = useDispatch();
+
+  
+  const handleFloating = () => {
+    dispatch(FloatingCartActions.toggleFloat());
+  }
+  
+
   return <>
   <footer>
     <div className="container">
@@ -71,6 +83,9 @@ function Footer() {
         </div>
         </div>
       </div>
+    </div>
+    <div className="floating-icon" onClick={() => handleFloating() }>
+      <CiShoppingCart />
     </div>
   </footer>
   </>
