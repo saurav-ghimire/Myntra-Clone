@@ -22,10 +22,10 @@ function Header() {
             <div className="custom-menu">
               <ul>
               <li> <Link to="">HOME </Link></li>
-              <li> <Link to="/men">MEN </Link></li>
-              <li> <Link to="/women">WOMEN </Link></li>
-              <li> <Link to="/kids">KIDS </Link></li>
-              <li> <Link to="/home-and-living">HOME & LIVING </Link></li>
+              <li> <Link to="/category/smartphones">smartphones </Link></li>
+              <li> <Link to="/category/laptops">laptops </Link></li>
+              <li> <Link to="/category/fragrances">fragrances </Link></li>
+              <li> <Link to="/category/skincare">Skin Care </Link></li>
               <li> <Link to="/shop">Shop <small>NEW</small></Link></li>
               </ul>
             </div>
